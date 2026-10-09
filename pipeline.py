@@ -6,6 +6,7 @@
 想要“今天该买什么”的可执行清单，请运行 strategy.py。
 """
 import os
+import json
 import numpy as np
 import pandas as pd
 import lightgbm as lgb

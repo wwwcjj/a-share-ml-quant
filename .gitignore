@@ -4,3 +4,5 @@ __pycache__/
 *.npy
 .venv/
 venv/
+out/model.txt
+out/model_meta.json
