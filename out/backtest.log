@@ -1,0 +1,26 @@
+样本: (16556, 26) | 日期: 2022-02-08 ~ 2025-09-23
+训练: (11272, 26) 测试: (5184, 26)
+IC  均值 0.0465  标准差 0.2673  ICIR 0.17
+RankIC 均值 0.0570
+
+===== 回测结果 (5日调仓, 扣0.1%单边) =====
+总收益   63.27%
+年化收益 59.41%
+最大回撤 -15.93%
+平均换手 69.87%
+调仓次数 52
+Traceback (most recent call last):
+  File "/home/cjj/.openclaw/workspace/quant_ml/backtest.py", line 111, in <module>
+    plt.plot(pd.to_datetime(nav_dates), nav, lw=2, color="#c0392b")
+  File "/home/cjj/.openclaw/workspace/quant-env/lib/python3.12/site-packages/matplotlib/pyplot.py", line 4043, in plot
+    return gca().plot(
+           ^^^^^^^^^^^
+  File "/home/cjj/.openclaw/workspace/quant-env/lib/python3.12/site-packages/matplotlib/axes/_axes.py", line 1792, in plot
+    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cjj/.openclaw/workspace/quant-env/lib/python3.12/site-packages/matplotlib/axes/_base.py", line 331, in __call__
+    yield from self._plot_args(
+               ^^^^^^^^^^^^^^^^
+  File "/home/cjj/.openclaw/workspace/quant-env/lib/python3.12/site-packages/matplotlib/axes/_base.py", line 509, in _plot_args
+    raise ValueError(f"x and y must have same first dimension, but "
+ValueError: x and y must have same first dimension, but have shapes (52,) and (53,)
