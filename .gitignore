@@ -6,3 +6,4 @@ __pycache__/
 venv/
 out/model.txt
 out/model_meta.json
+out/*.log
