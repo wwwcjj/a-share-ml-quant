@@ -145,7 +145,7 @@ max_dd = (nav / np.maximum.accumulate(nav) - 1).min()
 periods_per_year = len(rets) / span_years if span_years > 0 else np.nan
 sharpe = (rets.mean() / rets.std(ddof=1) * np.sqrt(periods_per_year)
           if len(rets) > 1 and rets.std(ddof=1) > 0 and periods_per_year > 0 else np.nan)
-print("\n=== 账户级近似回测 (6000 RMB, max 10 names, board lots) ===")
+print("\n=== 账户级近似回测 (%d RMB, max %d names, board lots) ===" % (INITIAL_CAPITAL, MAX_HOLDINGS))
 print("Ending equity: %.2f | total return: %.2f%%" % (nav[-1], (nav[-1] / INITIAL_CAPITAL - 1) * 100))
 print("Annualized: %.2f%% | max drawdown: %.2f%% | Sharpe: %.2f" % (ann * 100, max_dd * 100, sharpe))
 print("Intervals: %d | mean filled names: %.2f | cumulative fees: %.2f RMB" %

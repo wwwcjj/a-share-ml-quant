@@ -1,8 +1,9 @@
-numpy
-pandas
-lightgbm
-scikit-learn
-akshare
-pyarrow
-matplotlib
-requests
+numpy==2.5.3
+pandas==3.0.6
+lightgbm==4.7.0
+scikit-learn==1.9.1
+scipy==1.18.1
+akshare==1.19.1
+pyarrow==25.0.1
+matplotlib==3.11.2
+requests==2.34.2
