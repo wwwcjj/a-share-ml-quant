@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """全A股10年日线 (新浪源 + 断点续传) -> data/all_prices.parquet"""
-import os, json, time, random, warnings
+import os, json, time, random, warnings, datetime
 warnings.filterwarnings("ignore")
 import akshare as ak
 import pandas as pd
@@ -9,7 +9,9 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(BASE, "data"); os.makedirs(OUT, exist_ok=True)
 CKPT = os.path.join(OUT, "_ckpt_all.json")
 BATCH = os.path.join(OUT, "_batch.parquet")
-START, END = "20150101", "20251001"
+START = "20150101"
+# 结束日期动态取当天，避免数据停在过去
+END = datetime.date.today().strftime("%Y%m%d")
 
 print("[1/4] 获取全A股清单...", flush=True)
 lst = ak.stock_info_a_code_name()

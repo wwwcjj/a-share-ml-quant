@@ -25,7 +25,7 @@ MIN_UNIVERSE = 1000  # 信号日至少要有这么多只股票有因子，才算
 def parse_args():
     p = argparse.ArgumentParser(description="生成当前 A 股 ML 选股策略")
     p.add_argument("--capital", type=float, default=6000.0, help="可用资金（元）")
-    p.add_argument("--names", type=int, default=10, help="目标持仓只数")
+    p.add_argument("--names", type=int, default=4, help="目标持仓只数")
     p.add_argument("--hold", type=int, default=5, help="持有交易日数")
     p.add_argument("--rounds", type=int, default=400, help="LightGBM 训练轮数")
     return p.parse_args()

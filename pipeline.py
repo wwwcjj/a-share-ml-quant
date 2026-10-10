@@ -24,7 +24,7 @@ DATA_PATH = os.path.join(BASE, "data", "all_prices.parquet")
 
 # 账户与成本假设；按小账户最低佣金计，费率需按本人券商核实。
 INITIAL_CAPITAL = 6000.0
-MAX_HOLDINGS = 10
+MAX_HOLDINGS = 4
 BUY_COMMISSION_RATE = 0.00025
 SELL_COMMISSION_RATE = 0.00025
 MIN_COMMISSION = 5.0
